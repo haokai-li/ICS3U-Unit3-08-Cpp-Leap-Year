@@ -21,22 +21,22 @@ int main() {
     // process
     try {
         userYear = std::stoi(userString);
-        if (userYear % 4 != 0) {
-            // output
-            std::cout << "It is a common year." << std::endl;
-        } else {
+        if (userYear % 400 != 0) {
             if (userYear % 100 != 0) {
-                // output
-                std::cout << "It is a leap year." << std::endl;
-            } else {
-                if (userYear % 400 != 0) {
+                if (userYear % 4 != 0) {
                     // output
                     std::cout << "It is a common year." << std::endl;
                 } else {
                     // output
                     std::cout << "It is a leap year." << std::endl;
                 }
+            } else {
+                // output
+                std::cout << "It is a common year." << std::endl;
             }
+        } else {
+            // output
+            std::cout << "It is a leap year." << std::endl;
         }
     } catch (std::invalid_argument) {
         // output
